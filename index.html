@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #7A2C2C;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            margin-top: 20px;
+        }
+
+        .search-box input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-box input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        .search-box input[type="submit"]:hover {
+            background-color: #333;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer p {
+            color: #555;
+        }
+
+        footer a {
+            color: #7A2C2C;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var certificateID = document.getElementById("certificateID").value;
+            // Check if the entered certificate ID is 1489190
+            if (certificateID === "1354190") {
+                // Allow form submission by returning true
+                return true;
+            } else {
+                // Prevent form submission and alert the user
+                alert("Invalid Certificate ID. Please enter the correct ID.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>CodSoft</h1>
+    <nav>
+        <a href="#">Services</a>
+        <a href="#">Internship</a>
+        <a href="#">Jobs</a>
+        <a href="#">Verification</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>CERTIFICATE VERIFICATION SYSTEM</h2>
+    <div class="search-box">
+        <!-- Adding the onsubmit event to call validateForm function -->
+        <form action="index2.html" onsubmit="return validateForm();">
+            <input type="text" id="certificateID" placeholder="Enter Certificate ID">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 &bull; Built with <a href="#">CodSoft</a></p>
+</footer>
+
+</body>
+</html>
